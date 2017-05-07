@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundimage" translatesAutoresizingMaskIntoConstraints="NO" id="q66-XA-Zcw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xvj-x1-fIB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VCt-Ih-7fY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jdl-e2-aCK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="BYZ-38-t0r" id="fjn-i2-KNb"/>
+                                                <outlet property="delegate" destination="BYZ-38-t0r" id="ach-7K-PPn"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="jdl-e2-aCK" secondAttribute="trailing" id="Gck-6O-cOb"/>
+                                        <constraint firstItem="jdl-e2-aCK" firstAttribute="top" secondItem="VCt-Ih-7fY" secondAttribute="top" id="Rik-0R-ret"/>
+                                        <constraint firstAttribute="bottom" secondItem="jdl-e2-aCK" secondAttribute="bottom" id="Rly-c6-41f"/>
+                                        <constraint firstItem="jdl-e2-aCK" firstAttribute="leading" secondItem="VCt-Ih-7fY" secondAttribute="leading" id="l2x-0h-say"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="q66-XA-Zcw" secondAttribute="trailing" id="8pI-sb-8nu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q66-XA-Zcw" secondAttribute="bottom" id="BEP-Nt-0MV"/>
+                            <constraint firstAttribute="trailing" secondItem="Xvj-x1-fIB" secondAttribute="trailing" id="IfO-as-Rji"/>
+                            <constraint firstItem="q66-XA-Zcw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="J79-gC-oFs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xvj-x1-fIB" secondAttribute="bottom" id="aAm-tK-FsP"/>
+                            <constraint firstItem="Xvj-x1-fIB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oDw-no-lGR"/>
+                            <constraint firstItem="q66-XA-Zcw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pkN-nf-jtl"/>
+                            <constraint firstItem="Xvj-x1-fIB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="y9D-ph-anW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jdl-e2-aCK" id="BcP-cb-8q7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundimage" width="376" height="667"/>
+    </resources>
+</document>
