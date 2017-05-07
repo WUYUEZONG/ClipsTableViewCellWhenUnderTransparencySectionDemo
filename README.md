@@ -1,0 +1,2 @@
+# ClipsTableViewCellWhenUnderTransparencySectionDemo
+ClipsTableViewCellWhenUnderTransparencySectionDemo
